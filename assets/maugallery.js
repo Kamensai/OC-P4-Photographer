@@ -153,6 +153,8 @@
           index = i ;
         }
       });
+      // débug : Ajout +1 pour cibler l'index précédent de l'image sur laquelle nous sommes.
+      index--;
       next =
         imagesCollection[index] ||
         imagesCollection[imagesCollection.length - 1];
@@ -192,6 +194,8 @@
           index = i;
         }
       });
+      // débug : Ajout +1 pour cibler l'index suivant de l'image sur laquelle nous sommes.
+      index++;
       next = imagesCollection[index] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
