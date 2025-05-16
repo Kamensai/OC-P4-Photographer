@@ -150,14 +150,11 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
+          // débug : Retrait -1 pour cibler l'index précédent de l'image sur laquelle nous sommes.
+          index = i - 1;
         }
       });
-      // débug : Ajout +1 pour cibler l'index précédent de l'image sur laquelle nous sommes.
-      index--;
-      next =
-        imagesCollection[index] ||
-        imagesCollection[imagesCollection.length - 1];
+      next = imagesCollection[index] || imagesCollection[imagesCollection.length - 1];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     nextImage() {
@@ -191,11 +188,10 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+          // débug : Ajout +1 pour cibler l'index suivant de l'image sur laquelle nous sommes.
+          index = i + 1 ;
         }
       });
-      // débug : Ajout +1 pour cibler l'index suivant de l'image sur laquelle nous sommes.
-      index++;
       next = imagesCollection[index] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
