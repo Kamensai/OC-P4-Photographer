@@ -9,6 +9,14 @@
 	Spécialisée dans les mariages, portraits et événements. Services de 50€ à 400€." />
 	<meta name="author" content="Nina Carducci" />
 
+	<!-- Préchargement des fonts  -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+	</noscript>	
+
 	<!-- Précharge le fichier CSS  -->
 	<link rel="preload" as="style" href="./assets/bootstrap/bootstrap.min.css">
 	<link rel="preload" as="style" href="./assets/style.min.css">
@@ -21,19 +29,51 @@
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="./assets/style.min.css">
 
-	<!-- Préchargement des fonts  -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript>
-	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
-	</noscript>	
+	<!-- Schema.org JSON-LD -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "ProfessionalService",
+		"name": "Nina Carducci",
+		"jobTitle": "Photographe",
+		"description": "Photographe indépendante à Bordeaux, spécialisée dans les mariages, portraits et événements.",
+		"url": "https://nina-carducci.github.io/", 
+		"image": "https://nina-carducci.github.io/assets/images/nina.png",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "68 avenue Alsace-Lorraine",
+			"addressLocality": "Bordeaux",
+			"postalCode": "33200",
+			"addressCountry": "FR"
+			},
+		"telephone": "05-56-67-78-89",
+		"priceRange": "50€-400€",
+		"openingHoursSpecification": [
+			{
+			"@type": "OpeningHoursSpecification",
+			"dayOfWeek": [
+				"Monday",
+				"Tuesday",
+				"Wednesday",
+				"Thursday",
+				"Friday"
+			],
+			"opens": "10:00",
+			"closes": "19:00"
+			}
+		],
+		"sameAs": [
+			"https://www.instagram.com/ninacarducci.photo/?hl=fr"
+		]
+	}
+	</script>
 
 	<!-- fichier Javascript minifié  -->
-	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
+	 <!-- defer : Charge le script en parallèle et l'exécute après le chargement du DOM. -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./assets/maugallery.min.js" defer ></script>
-	<script src="./assets/scripts.min.js" defer ></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer ></script>
+	<script src="./assets/maugallery.min.js" defer></script>
+	<script src="./assets/scripts.min.js" defer></script>
 
 	 <!-- Précharge les images pour le chargement rapide  -->
 	<link rel="preload" as="image" href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash1-1920.webp">
@@ -76,7 +116,8 @@
 								./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash1-1280.jpg 1280w,
 								./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash1-768.jpg 768w" 
 							sizes="(max-width: 768px) 768px, (max-width: 1280px) 1280px, 1920px" 
-							class="d-block w-100" alt="Homme traversant la route.">
+							class="d-block w-100" 
+							alt="Homme traversant la route.">
 					</picture>
 				</div>
 				<div class="carousel-item">
@@ -91,7 +132,9 @@
 									./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash1-1280.jpg 1280w,
 									./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash1-768.jpg 768w" 
 							sizes="(max-width: 768px) 768px, (max-width: 1280px) 1280px, 1920px" 
-							class="d-block w-100" alt="Une foule de concert qui lève les bras." loading="lazy">
+							class="d-block w-100" 
+							alt="Une foule de concert qui lève les bras."
+							loading="lazy">
 					</picture>	
 				</div>
 				<div class="carousel-item">
@@ -106,7 +149,9 @@
 									./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash1-1280.jpg 1280w,
 									./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash1-768.jpg 768w" 
 							sizes="(max-width: 768px) 768px, (max-width: 1280px) 1280px, 1920px" 
-							class="d-block w-100" alt="Photo de mariage. Les mariés s'embrassent au milieu d'une haie d'honneur." loading="lazy">
+							class="d-block w-100" 
+							alt="Photo de mariage. Les mariés s'embrassent au milieu d'une haie d'honneur."
+							loading="lazy">
 					</picture>	
 				</div>
 			</div>
@@ -210,7 +255,7 @@
 	<section id="contact">
 	<div class="container">
 		<div class="form-container">
-			<h3>Une question ? Une demande de devis ?</h3>
+			<h2>Une question ? Une demande de devis ?</h2>
 			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
 			<form action="" method="post">
 				<label>Nom</label>
